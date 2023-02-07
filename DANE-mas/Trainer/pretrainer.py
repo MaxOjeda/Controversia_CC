@@ -55,5 +55,3 @@ class PreTrainer(object):
 
         with open(self.pretrain_params_path, 'wb') as handle:
             pickle.dump([self.W_init, self.b_init], handle, protocol=pickle.HIGHEST_PROTOCOL)
-
-

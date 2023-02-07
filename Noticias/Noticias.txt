@@ -1,0 +1,4 @@
+Dentro de cada carpeta se encuentran lo siguientes archivos:
+    _tweets: contiene todos los tweets relacionados a la noticia filtrado por fecha y por keywords
+    _tbip: archivo de dos columnas, la primera el user_id, la seguna el ideal_point
+    _pares: dos columnas, user1 retweetea a user2
