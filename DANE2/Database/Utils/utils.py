@@ -5,8 +5,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, accuracy_score
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn import preprocessing
-import tensorflow as tf
-
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 class Dotdict(dict):
     """dot.notation access to dictionary attributes"""
