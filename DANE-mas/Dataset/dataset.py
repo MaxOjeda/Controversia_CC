@@ -55,7 +55,6 @@ class Dataset(object):
 
         num_features = len(lines[0].split(' ')) - 1
         Z = np.zeros((num_nodes, num_features), dtype=np.float32)
-
         for line in lines:
             line = line.split(' ')
             node_id = node_map[line[0]]
