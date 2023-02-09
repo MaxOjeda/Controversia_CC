@@ -5,8 +5,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, accuracy_score
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn import preprocessing
-import tensorflow as tf
-
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 class Dotdict(dict):
     """dot.notation access to dictionary attributes"""
@@ -18,7 +18,7 @@ class Dotdict(dict):
 
 
 def small_trick(y_test, y_pred):
-    y_pred_new = np.zeros(y_pred.shape, np.bool)
+    y_pred_new = np.zeros(y_pred.shape, bool)
     sort_index = np.flip(np.argsort(y_pred, axis=1), 1)
     for i in range(y_test.shape[0]):
         num = sum(y_test[i])
